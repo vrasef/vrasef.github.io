@@ -15,7 +15,7 @@ width: 100%;
 text-align: center;   
 color: #ffffff;
 height: 100vh;
-background: #000 url(../img/main-bg.jpg) center center no-repeat;
+ /* background: #000 url(../img/main-bg.jpg) center center no-repeat; */
 }
 .main-overlay {
  position: absolute;
