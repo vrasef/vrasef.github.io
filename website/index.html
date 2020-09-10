@@ -36,8 +36,6 @@
     </div>
     <a class="main-down" href="#portfolio"><i class="icon-down"></i></a>
   </div>
-  <div><a href="#goToMe" class="flowing-scroll other-class">перейти</a></div>
-
   <div class="portfolio" id="portfolio">
     <div class="container">
       <h2 class="section-header">Портфолио</h2>
@@ -88,16 +86,17 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>$('.flowing-scroll').on( 'click', function(){ 
-    var el = $(this);
-    var dest = el.attr('href'); // получаем направление
-    if(dest !== undefined && dest !== '') { // проверяем существование
-        $('html').animate({ 
-            scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-        }, 500 // скорость прокрутки
-        );
-    }
-    return false;
-});</script>
+  <script>
+  $(document).ready(function) {
+
+    $(".slowly").on("click"), function (event) {
+      event.preventDefault();
+      var id = $(this).attr('href'),
+        top = $(id).offset().top
+       $('body,html').animate({scrollTop: top}, 800); 
+    });
+
+  }); 
+  </script>
   </body>
 </html>
